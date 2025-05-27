@@ -1,0 +1,1438 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pockets data &#8212; HUGS 2025 - Artificial Intelligence for Nuclear Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "cfteach/HUGS2025");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2.5_Data_Description_Practice_complete';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="canonical" href="https://cfteach.github.io/HUGS2025/2.5_Data_Description_Practice_complete.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This page is being updated</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_2025.pdf" class="logo__image only-light" alt="HUGS 2025 - Artificial Intelligence for Nuclear Physics - Home"/>
+    <script>document.write(`<img src="_static/logo_2025.pdf" class="logo__image only-dark" alt="HUGS 2025 - Artificial Intelligence for Nuclear Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    AI/ML for Fusion Summer School 2025
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1ySR6KmDs7PM1tVcDYuQwvt0wXuv0WIyS/view">(Lec 1) AI/ML for Nuclear Physics - A High-Bias, Low-Variance Introduction</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1kjGhjYMtmQIz42_fRNfoudC7UoSUMS7t/view">(Lec 2) Leveraging AI/ML for the future Electron Ion Collider</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1e0-qNQUldvUZEKib367nltQgqNBNf9LJ/view">(Lec 2, extra) AI/ML activities at Jefferson Lab - Paving the way for the Electron Ion Collider</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/19tPr009whWgTjSlm9yUSWsUcs62UWjye/view">(Lec 3) ePIC at EIC – The First Large-Scale Experiment Designed with the AI Assistance</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="NeuralNetwork_preflight.html">(Tut 0) "Pre-flight"</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NN_h1_reg_CF.html">(Tut 1) Deeply Learning Deep Inelastic Scattering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe3a_moo_EA_3obj.html">(Tut 2 - part a) AI-assisted design with MOEA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exe3b_moo_BO_3obj.html">(Tut 2 - part b) AI-assisted design with MOBO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://eic.ai/community">AI4EIC tutorials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">[Pre-flight]</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://docs.google.com/presentation/d/1BV2-N-c1bq4yx1IsPMW4fhC9i1SCdRAU/edit?usp=sharing&amp;ouid=113195593718692427789&amp;rtpof=true&amp;sd=true"> Intro to Modeling, Linear Regression (lecture slides)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Day-1/GIT-course/intro_to_git.html">1. Brief course on <code class="docutils literal notranslate"><span class="pre">git</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/VCS.html">1.1. Version Control System (VCS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/git_basics.html">1.2. What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/git_configure.html">1.3. Configuring your <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Day-1/GIT-course/git_exercises.html">2. Exercises on <code class="docutils literal notranslate"><span class="pre">git</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/Exercise-1.html">2.1. Exercise 1: Basic Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/Exercise-2.html">2.2. Exercise 2: Commits, push and branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/Exercise-3.html">2.3. Advanced exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/GIT-course/Exercise-4.html">2.4. GitHub Actions and Workflow Tutorial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="Day-1/VS-code.html">3. Installing Visual Studio Code</a></li>
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="Day-1/HPC-course/intro_to_HPC_HTC.html">6. Introduction to High Performance Computing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/HPC-course/intro_to_HPC.html">6.1. High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/HPC-course/ssh_login.html">6.2. SSH into a Front-End Node Using Proxy Jump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/HPC-course/file_systems_WM.html">6.3. William &amp; Mary Research Computing: File Systems Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Day-1/HPC-course/SLURM_commands2.html">6.4. Introduction to SLURM</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Intro_DS.html">Introduction to Data Science (beginners)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EIC-Visualization.html">Interactively Navigate the Pareto Front of the EIC Tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EIC-Summary.html">Summary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Datasets / Modules</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1Z-lUTZrHoqeKsYHf34gR3kF45bVM6XG7/view">all-h1-rapgap.root</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/cfteach/HUGS23/main/other/intro_Data.py">intro_Data.py</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="referencesmc.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/cfteach/HUGS_2025/blob/webpage-src/source_material/2.5_Data_Description_Practice_complete.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cfteach/HUGS_2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cfteach/HUGS_2025/edit/webpage-src//source_material/2.5_Data_Description_Practice_complete.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cfteach/HUGS_2025/issues/new?title=Issue%20on%20page%20%2F2.5_Data_Description_Practice_complete.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/2.5_Data_Description_Practice_complete.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pockets data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pockets data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#univariate-exploration">Univariate exploration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bivariate-exploration">Bivariate exploration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#try-dimensionality-reduction-with-pca">Try dimensionality reduction with PCA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#try-tsne">Try tSNE</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>The purpose of this exercise is to review what we’ve discussed, but more importantly to go through the actual steps you would undertake with a new data set.</p>
+<section id="pockets-data">
+<h1>Pockets data<a class="headerlink" href="#pockets-data" title="Link to this heading">#</a></h1>
+<p>(Source: <a class="reference external" href="https://pudding.cool/2018/08/pockets/">https://pudding.cool/2018/08/pockets/</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Read in the data from pockets.csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pockets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/pockets.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Show the first few lines of the data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pockets</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>brand</th>
+      <th>style</th>
+      <th>menWomen</th>
+      <th>name</th>
+      <th>fabric</th>
+      <th>price</th>
+      <th>maxHeightFront</th>
+      <th>minHeightFront</th>
+      <th>rivetHeightFront</th>
+      <th>maxWidthFront</th>
+      <th>minWidthFront</th>
+      <th>maxHeightBack</th>
+      <th>minHeightBack</th>
+      <th>maxWidthBack</th>
+      <th>minWidthBack</th>
+      <th>cutout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Arizona</td>
+      <td>skinny</td>
+      <td>women</td>
+      <td>Fave Super Skinny</td>
+      <td>78% cotton, 20% polyester, 2% spandex</td>
+      <td>42.0</td>
+      <td>14.5</td>
+      <td>15.0</td>
+      <td>6.5</td>
+      <td>16.5</td>
+      <td>13.0</td>
+      <td>15.0</td>
+      <td>12.2</td>
+      <td>13.7</td>
+      <td>12.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Arizona</td>
+      <td>straight</td>
+      <td>women</td>
+      <td>Perfect Boot</td>
+      <td>78% cotton, 20% polyester, 2% spandex</td>
+      <td>42.0</td>
+      <td>14.5</td>
+      <td>14.0</td>
+      <td>6.5</td>
+      <td>16.0</td>
+      <td>12.5</td>
+      <td>15.5</td>
+      <td>12.2</td>
+      <td>13.0</td>
+      <td>11.2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ralph Lauren</td>
+      <td>skinny</td>
+      <td>women</td>
+      <td>Modern Skinny Slimming Fit</td>
+      <td>92% cotton, 7% poly, 1% elastane</td>
+      <td>89.5</td>
+      <td>13.0</td>
+      <td>13.5</td>
+      <td>6.5</td>
+      <td>14.5</td>
+      <td>12.0</td>
+      <td>15.5</td>
+      <td>13.0</td>
+      <td>13.5</td>
+      <td>12.5</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ralph Lauren</td>
+      <td>straight</td>
+      <td>women</td>
+      <td>Premier Straight Slimming Fit</td>
+      <td>92% cotton, 7% poly, 1% elastane</td>
+      <td>89.5</td>
+      <td>13.0</td>
+      <td>13.5</td>
+      <td>6.5</td>
+      <td>14.5</td>
+      <td>12.0</td>
+      <td>14.5</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>12.2</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Uniqlo</td>
+      <td>skinny</td>
+      <td>women</td>
+      <td>Skinny Fit</td>
+      <td>87% cotton, 9% polyester, 4% spandex</td>
+      <td>39.9</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>5.5</td>
+      <td>14.0</td>
+      <td>11.5</td>
+      <td>14.0</td>
+      <td>12.0</td>
+      <td>14.2</td>
+      <td>11.7</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Split out possible targets/metadata and show the first few lines</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="n">pockets</span><span class="p">[[</span><span class="s1">&#39;brand&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;menWomen&#39;</span><span class="p">,</span> <span class="s1">&#39;cutout&#39;</span><span class="p">]]</span>
+<span class="n">metadata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>brand</th>
+      <th>style</th>
+      <th>menWomen</th>
+      <th>cutout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Arizona</td>
+      <td>skinny</td>
+      <td>women</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Arizona</td>
+      <td>straight</td>
+      <td>women</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ralph Lauren</td>
+      <td>skinny</td>
+      <td>women</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ralph Lauren</td>
+      <td>straight</td>
+      <td>women</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Uniqlo</td>
+      <td>skinny</td>
+      <td>women</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Turn into df with just the numeric data and show the first few lines</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pockets_n</span> <span class="o">=</span> <span class="n">pockets</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;brand&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;menWomen&#39;</span><span class="p">,</span> <span class="s1">&#39;fabric&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;cutout&#39;</span><span class="p">])</span>
+<span class="n">pockets_n</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>maxHeightFront</th>
+      <th>minHeightFront</th>
+      <th>rivetHeightFront</th>
+      <th>maxWidthFront</th>
+      <th>minWidthFront</th>
+      <th>maxHeightBack</th>
+      <th>minHeightBack</th>
+      <th>maxWidthBack</th>
+      <th>minWidthBack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>42.0</td>
+      <td>14.5</td>
+      <td>15.0</td>
+      <td>6.5</td>
+      <td>16.5</td>
+      <td>13.0</td>
+      <td>15.0</td>
+      <td>12.2</td>
+      <td>13.7</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>42.0</td>
+      <td>14.5</td>
+      <td>14.0</td>
+      <td>6.5</td>
+      <td>16.0</td>
+      <td>12.5</td>
+      <td>15.5</td>
+      <td>12.2</td>
+      <td>13.0</td>
+      <td>11.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>89.5</td>
+      <td>13.0</td>
+      <td>13.5</td>
+      <td>6.5</td>
+      <td>14.5</td>
+      <td>12.0</td>
+      <td>15.5</td>
+      <td>13.0</td>
+      <td>13.5</td>
+      <td>12.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>89.5</td>
+      <td>13.0</td>
+      <td>13.5</td>
+      <td>6.5</td>
+      <td>14.5</td>
+      <td>12.0</td>
+      <td>14.5</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>12.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>39.9</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>5.5</td>
+      <td>14.0</td>
+      <td>11.5</td>
+      <td>14.0</td>
+      <td>12.0</td>
+      <td>14.2</td>
+      <td>11.7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="univariate-exploration">
+<h1>Univariate exploration<a class="headerlink" href="#univariate-exploration" title="Link to this heading">#</a></h1>
+<p>Here you should calculate some statistics and make at least one plot to explore the distribution of the individual variables - this should be a plot that shows ALL of the variables (a box plot or strip chart).</p>
+<p>Describe the basic stats of the pockets data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pockets_n</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>maxHeightFront</th>
+      <th>minHeightFront</th>
+      <th>rivetHeightFront</th>
+      <th>maxWidthFront</th>
+      <th>minWidthFront</th>
+      <th>maxHeightBack</th>
+      <th>minHeightBack</th>
+      <th>maxWidthBack</th>
+      <th>minWidthBack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>80.000000</td>
+      <td>80.00000</td>
+      <td>80.00000</td>
+      <td>80.000000</td>
+      <td>80.000000</td>
+      <td>80.00000</td>
+      <td>80.000000</td>
+      <td>80.000000</td>
+      <td>80.000000</td>
+      <td>80.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>80.750000</td>
+      <td>18.72875</td>
+      <td>15.65375</td>
+      <td>6.654375</td>
+      <td>15.777500</td>
+      <td>12.81000</td>
+      <td>15.565000</td>
+      <td>13.026250</td>
+      <td>13.521250</td>
+      <td>11.948750</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>44.551841</td>
+      <td>4.88724</td>
+      <td>3.50392</td>
+      <td>0.960129</td>
+      <td>1.469864</td>
+      <td>1.04864</td>
+      <td>0.922311</td>
+      <td>0.948783</td>
+      <td>0.864591</td>
+      <td>0.889601</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>9.990000</td>
+      <td>11.50000</td>
+      <td>9.50000</td>
+      <td>4.500000</td>
+      <td>12.000000</td>
+      <td>11.00000</td>
+      <td>13.000000</td>
+      <td>10.500000</td>
+      <td>11.500000</td>
+      <td>9.500000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>49.950000</td>
+      <td>14.00000</td>
+      <td>13.00000</td>
+      <td>6.000000</td>
+      <td>14.500000</td>
+      <td>12.00000</td>
+      <td>15.000000</td>
+      <td>12.425000</td>
+      <td>13.000000</td>
+      <td>11.500000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>73.975000</td>
+      <td>20.25000</td>
+      <td>15.00000</td>
+      <td>6.500000</td>
+      <td>16.000000</td>
+      <td>12.60000</td>
+      <td>15.500000</td>
+      <td>13.000000</td>
+      <td>13.500000</td>
+      <td>12.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>95.712500</td>
+      <td>22.50000</td>
+      <td>17.00000</td>
+      <td>7.000000</td>
+      <td>17.000000</td>
+      <td>13.50000</td>
+      <td>16.050000</td>
+      <td>13.700000</td>
+      <td>14.000000</td>
+      <td>12.500000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>249.000000</td>
+      <td>28.00000</td>
+      <td>25.00000</td>
+      <td>9.200000</td>
+      <td>19.000000</td>
+      <td>16.00000</td>
+      <td>17.500000</td>
+      <td>15.000000</td>
+      <td>15.500000</td>
+      <td>14.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Make a boxplot of the numeric data pockets_n using <strong>seaborn</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">pockets_n</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/68d4eeee521b8c90eec640850afc5c99b831120b7ec0d87e230994a67235534d.png" src="_images/68d4eeee521b8c90eec640850afc5c99b831120b7ec0d87e230994a67235534d.png" />
+</div>
+</div>
+<p>Make a stripplot of the numeric data pockets_n using <strong>seaborn</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">pockets_n</span><span class="p">,</span> <span class="n">orient</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1763e0d91d80e924dbe0e3bbb07120ebf46d5008e03c3dfe386f87fa0869c32e.png" src="_images/1763e0d91d80e924dbe0e3bbb07120ebf46d5008e03c3dfe386f87fa0869c32e.png" />
+</div>
+</div>
+</section>
+<section id="bivariate-exploration">
+<h1>Bivariate exploration<a class="headerlink" href="#bivariate-exploration" title="Link to this heading">#</a></h1>
+<p>Here you should look at the pairwise correlations between the variables (this will become more important as we build models). Look for things that are highly correlated. Suggestion: for this many variables, calculate the matrix of correlation coefficients and the plot in a heatmap.</p>
+<p>get the <strong>lower left</strong> of the correlation coefficient matrix of pockets_n</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1">#let&#39;s try both np and pd</span>
+<span class="c1">#numpy </span>
+<span class="c1">#corr1 = np.corrcoef(pockets_n, rowvar=False)</span>
+<span class="c1">#pandas</span>
+<span class="n">corr2</span> <span class="o">=</span> <span class="n">pockets_n</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1">#Then get the lower left of corr</span>
+<span class="c1">#LL_corr = np.tril(corr1)</span>
+<span class="c1">#or </span>
+<span class="n">LL_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">corr2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">LL_corr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.          0.          0.          0.          0.          0.
+   0.          0.          0.          0.        ]
+ [-0.07580948  1.          0.          0.          0.          0.
+   0.          0.          0.          0.        ]
+ [-0.05726307  0.6922398   1.          0.          0.          0.
+   0.          0.          0.          0.        ]
+ [-0.00408654  0.49195006  0.44184771  1.          0.          0.
+   0.          0.          0.          0.        ]
+ [-0.05089182  0.37984274  0.42710365  0.32180508  1.          0.
+   0.          0.          0.          0.        ]
+ [-0.04476144  0.47278469  0.48825307  0.26605009  0.72489098  1.
+   0.          0.          0.          0.        ]
+ [-0.04940756  0.48248233  0.37265472  0.27105388  0.19325272  0.20322845
+   1.          0.          0.          0.        ]
+ [ 0.02699044  0.50972103  0.49410216  0.31266181  0.25194488  0.23510309
+   0.78841171  1.          0.          0.        ]
+ [-0.03979776  0.15670854  0.25734077  0.23349659  0.2448139   0.3151557
+   0.38953852  0.35175665  1.          0.        ]
+ [-0.16948376  0.2248765   0.27667124  0.44308704  0.2994946   0.34290472
+   0.53158291  0.41148806  0.63554556  1.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">corr1</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr1</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;bwr&#39;</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0af6b3594c8e7fa376072acd616d876690575f41e8e53b9204981386cb1ebb88.png" src="_images/0af6b3594c8e7fa376072acd616d876690575f41e8e53b9204981386cb1ebb88.png" />
+</div>
+</div>
+</section>
+<section id="try-dimensionality-reduction-with-pca">
+<h1>Try dimensionality reduction with PCA<a class="headerlink" href="#try-dimensionality-reduction-with-pca" title="Link to this heading">#</a></h1>
+<p>Since there are several variables, we will try to look for any kind of patterns in the data with PCA. Suggestions: go back to your univariate analysis to determine if the data needs to be scaled, if so, scale it first; do PCA; print out evr; plot PC1 and PC2 and color in the points by the values of metadata variables to look for patterns. Choose metadata variables that you think might separate the data.</p>
+<p>Import the PCA function from sklearn, and assign it to an object pca</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Do a PCA transformation to the numeric data pockets_n</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca_X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">pockets_n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Print out the explained variance ratio</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9.78595432e-01 1.60916108e-02 2.47542964e-03 1.08597747e-03
+ 7.63652380e-04 3.67914379e-04 2.82591749e-04 1.53446204e-04
+ 1.13382997e-04 7.05628829e-05]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot PC1 and PC2, and color in the points by the values of metadata variables to look for patterns. Choose metadata variables that you think might separate the data. Candidate variables: ‘menWomen’, ‘cutout’, ‘style’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;slategrey&#39;</span><span class="p">]</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;menWomen&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">var</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pca_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">pca_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dd07cc8b8809f5d4578098daa414778ea2b4783835f47da7f5a4055d231d5a36.png" src="_images/dd07cc8b8809f5d4578098daa414778ea2b4783835f47da7f5a4055d231d5a36.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;slategrey&#39;</span><span class="p">]</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;cutout&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">var</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pca_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">pca_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/855d32026293fdfeed37e1d6e4ca566cb00da1ac49283bdfa899ed679ea5ac29.png" src="_images/855d32026293fdfeed37e1d6e4ca566cb00da1ac49283bdfa899ed679ea5ac29.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;slategrey&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;violet&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">var</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pca_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">pca_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d1a6027e769d7c9aaf639c1239d6562e306b5980f59fcd95481a14237d9e0c0a.png" src="_images/d1a6027e769d7c9aaf639c1239d6562e306b5980f59fcd95481a14237d9e0c0a.png" />
+</div>
+</div>
+</section>
+<section id="try-tsne">
+<h1>Try tSNE<a class="headerlink" href="#try-tsne" title="Link to this heading">#</a></h1>
+<p>Use random state 99. Plot your results and shade in the points by metadata as you did for PCA (you can narrow down which metadata to consider based on your previous results). How does the PCA differ from the tSNE?</p>
+<p>Import TSNE from sklearn.manifold and assign it to tsne, set random state to 99</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+<span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">99</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Perform a TSNE transformation on pockets_n data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsne_X</span> <span class="o">=</span> <span class="n">tsne</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">pockets_n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot tsne_X (what is it exactly??), and color in the points by the values of metadata variables to look for patterns. Choose the same metadata as what you did for PCA</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&#39;menWomen&#39;</span>
+<span class="c1">#hint: use the Series.unique() function to get the unique labels for the metadata variable</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;menWomen&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;menWomen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;slategrey&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">tsne_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">tsne_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span>
+               <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6d50191f9519fa6092e7828744cd599976fae702d4ecf046a7516f6fa6e449d9.png" src="_images/6d50191f9519fa6092e7828744cd599976fae702d4ecf046a7516f6fa6e449d9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&#39;cutout&#39;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;cutout&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;cutout&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;slategrey&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">tsne_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">tsne_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span>
+               <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/241343d2069f4e930e68cca82ee58590efe7a219f74baabdb37e4ea7910048eb.png" src="_images/241343d2069f4e930e68cca82ee58590efe7a219f74baabdb37e4ea7910048eb.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&#39;style&#39;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">,</span> <span class="s1">&#39;slategrey&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">tsne_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">tsne_X</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">yi</span><span class="p">],</span>
+               <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">yi</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6deff0658c37e2f0e6d3cf8dddb8336d3eff330fc9147ed7be0a33ac43c04030.png" src="_images/6deff0658c37e2f0e6d3cf8dddb8336d3eff330fc9147ed7be0a33ac43c04030.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "cfteach/HUGS_2025",
+            ref: "webpage-src",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pockets data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#univariate-exploration">Univariate exploration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bivariate-exploration">Bivariate exploration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#try-dimensionality-reduction-with-pca">Try dimensionality reduction with PCA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#try-tsne">Try tSNE</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cristiano Fanelli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  HUGS2025
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

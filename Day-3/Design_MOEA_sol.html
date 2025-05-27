@@ -1,0 +1,1298 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MOEA &#8212; HUGS 2025 - Artificial Intelligence for Nuclear Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "cfteach/HUGS2025");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Day-3/Design_MOEA_sol';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="canonical" href="https://cfteach.github.io/HUGS2025/Day-3/Design_MOEA_sol.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">This page is being updated</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_2025.pdf" class="logo__image only-light" alt="HUGS 2025 - Artificial Intelligence for Nuclear Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo_2025.pdf" class="logo__image only-dark" alt="HUGS 2025 - Artificial Intelligence for Nuclear Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    AI/ML for Fusion Summer School 2025
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1ySR6KmDs7PM1tVcDYuQwvt0wXuv0WIyS/view">(Lec 1) AI/ML for Nuclear Physics - A High-Bias, Low-Variance Introduction</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1kjGhjYMtmQIz42_fRNfoudC7UoSUMS7t/view">(Lec 2) Leveraging AI/ML for the future Electron Ion Collider</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1e0-qNQUldvUZEKib367nltQgqNBNf9LJ/view">(Lec 2, extra) AI/ML activities at Jefferson Lab - Paving the way for the Electron Ion Collider</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/19tPr009whWgTjSlm9yUSWsUcs62UWjye/view">(Lec 3) ePIC at EIC – The First Large-Scale Experiment Designed with the AI Assistance</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../NeuralNetwork_preflight.html">(Tut 0) "Pre-flight"</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NN_h1_reg_CF.html">(Tut 1) Deeply Learning Deep Inelastic Scattering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exe3a_moo_EA_3obj.html">(Tut 2 - part a) AI-assisted design with MOEA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exe3b_moo_BO_3obj.html">(Tut 2 - part b) AI-assisted design with MOBO</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://eic.ai/community">AI4EIC tutorials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">[Pre-flight]</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://docs.google.com/presentation/d/1BV2-N-c1bq4yx1IsPMW4fhC9i1SCdRAU/edit?usp=sharing&amp;ouid=113195593718692427789&amp;rtpof=true&amp;sd=true"> Intro to Modeling, Linear Regression (lecture slides)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Day-1/GIT-course/intro_to_git.html">1. Brief course on <code class="docutils literal notranslate"><span class="pre">git</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/VCS.html">1.1. Version Control System (VCS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/git_basics.html">1.2. What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/git_configure.html">1.3. Configuring your <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Day-1/GIT-course/git_exercises.html">2. Exercises on <code class="docutils literal notranslate"><span class="pre">git</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/Exercise-1.html">2.1. Exercise 1: Basic Git Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/Exercise-2.html">2.2. Exercise 2: Commits, push and branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/Exercise-3.html">2.3. Advanced exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/GIT-course/Exercise-4.html">2.4. GitHub Actions and Workflow Tutorial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Day-1/VS-code.html">3. Installing Visual Studio Code</a></li>
+
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Day-1/HPC-course/intro_to_HPC_HTC.html">6. Introduction to High Performance Computing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/HPC-course/intro_to_HPC.html">6.1. High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/HPC-course/ssh_login.html">6.2. SSH into a Front-End Node Using Proxy Jump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/HPC-course/file_systems_WM.html">6.3. William &amp; Mary Research Computing: File Systems Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Day-1/HPC-course/SLURM_commands2.html">6.4. Introduction to SLURM</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro_DS.html">Introduction to Data Science (beginners)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../EIC-Visualization.html">Interactively Navigate the Pareto Front of the EIC Tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../EIC-Summary.html">Summary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Datasets / Modules</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1Z-lUTZrHoqeKsYHf34gR3kF45bVM6XG7/view">all-h1-rapgap.root</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/cfteach/HUGS23/main/other/intro_Data.py">intro_Data.py</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../referencesmc.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/cfteach/HUGS_2025/blob/webpage-src/source_material/Day-3/Design_MOEA_sol.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cfteach/HUGS_2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cfteach/HUGS_2025/edit/webpage-src//source_material/Day-3/Design_MOEA_sol.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cfteach/HUGS_2025/issues/new?title=Issue%20on%20page%20%2FDay-3/Design_MOEA_sol.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Day-3/Design_MOEA_sol.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MOEA</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-detector-geometry-and-simulate-tracks">Create detector geometry and simulate tracks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-parameters">LIST OF PARAMETERS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-objectives">Define Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-objective-optimization">Multi-Objective Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-problem-and-choice-of-optimization-algorithm">Creation of Problem and choice of optimization algorithm.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-results">Analysis of Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="moea">
+<h1>MOEA<a class="headerlink" href="#moea" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget<span class="w"> </span>https://raw.githubusercontent.com/cfteach/modules/master/detector2.py
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pymoo
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>plotly
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>ipyvolume
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>altair
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2024-07-10 06:27:57--  https://raw.githubusercontent.com/cfteach/modules/master/detector2.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 7976 (7.8K) [text/plain]
+Saving to: ‘detector2.py.1’
+
+detector2.py.1      100%[===================&gt;]   7.79K  --.-KB/s    in 0.02s   
+
+2024-07-10 06:27:57 (485 KB/s) - ‘detector2.py.1’ saved [7976/7976]
+
+Collecting pymoo
+  Using cached pymoo-0.6.1.1-py3-none-any.whl
+Requirement already satisfied: numpy&gt;=1.15 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pymoo) (1.26.0)
+Requirement already satisfied: scipy&gt;=1.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pymoo) (1.13.0)
+Requirement already satisfied: matplotlib&gt;=3 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pymoo) (3.9.0)
+Collecting autograd&gt;=1.4 (from pymoo)
+  Using cached autograd-1.6.2-py3-none-any.whl.metadata (706 bytes)
+Collecting cma==3.2.2 (from pymoo)
+  Using cached cma-3.2.2-py2.py3-none-any.whl.metadata (8.0 kB)
+Collecting alive-progress (from pymoo)
+  Using cached alive_progress-3.1.5-py3-none-any.whl.metadata (68 kB)
+Collecting dill (from pymoo)
+  Using cached dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+Collecting Deprecated (from pymoo)
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+Collecting future&gt;=0.15.2 (from autograd&gt;=1.4-&gt;pymoo)
+  Using cached future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (1.2.1)
+Requirement already satisfied: cycler&gt;=0.10 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (4.51.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (1.4.5)
+Requirement already satisfied: packaging&gt;=20.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (24.0)
+Requirement already satisfied: pillow&gt;=8 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (10.3.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (3.1.2)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib&gt;=3-&gt;pymoo) (2.9.0)
+Collecting about-time==4.2.1 (from alive-progress-&gt;pymoo)
+  Using cached about_time-4.2.1-py3-none-any.whl.metadata (13 kB)
+Collecting grapheme==0.6.0 (from alive-progress-&gt;pymoo)
+  Using cached grapheme-0.6.0-py3-none-any.whl
+Collecting wrapt&lt;2,&gt;=1.10 (from Deprecated-&gt;pymoo)
+  Using cached wrapt-1.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: six&gt;=1.5 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3-&gt;pymoo) (1.16.0)
+Using cached cma-3.2.2-py2.py3-none-any.whl (249 kB)
+Using cached autograd-1.6.2-py3-none-any.whl (49 kB)
+Using cached alive_progress-3.1.5-py3-none-any.whl (75 kB)
+Using cached about_time-4.2.1-py3-none-any.whl (13 kB)
+Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Using cached dill-0.3.8-py3-none-any.whl (116 kB)
+Using cached future-1.0.0-py3-none-any.whl (491 kB)
+Using cached wrapt-1.16.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (87 kB)
+Installing collected packages: grapheme, wrapt, future, dill, cma, about-time, Deprecated, autograd, alive-progress, pymoo
+Successfully installed Deprecated-1.2.14 about-time-4.2.1 alive-progress-3.1.5 autograd-1.6.2 cma-3.2.2 dill-0.3.8 future-1.0.0 grapheme-0.6.0 pymoo-0.6.1.1 wrapt-1.16.0
+Requirement already satisfied: plotly in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (5.22.0)
+Requirement already satisfied: tenacity&gt;=6.2.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from plotly) (8.3.0)
+Requirement already satisfied: packaging in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from plotly) (24.0)
+Requirement already satisfied: ipyvolume in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (0.6.3)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (8.1.3)
+Requirement already satisfied: bqplot in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (0.12.43)
+Requirement already satisfied: numpy in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (1.26.0)
+Requirement already satisfied: traittypes in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (0.2.1)
+Requirement already satisfied: traitlets in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (5.14.3)
+Requirement already satisfied: Pillow in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (10.3.0)
+Requirement already satisfied: ipywebrtc in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (0.6.0)
+Requirement already satisfied: requests in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (2.32.3)
+Requirement already satisfied: ipyvuetify in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (1.9.4)
+Requirement already satisfied: ipyvue&gt;=1.7.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (1.11.1)
+Requirement already satisfied: pythreejs&gt;=2.4.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (2.4.2)
+Requirement already satisfied: matplotlib in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipyvolume) (3.9.0)
+Requirement already satisfied: comm&gt;=0.1.3 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.2.2)
+Requirement already satisfied: ipython&gt;=6.1.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipywidgets&gt;=7.0.0-&gt;ipyvolume) (8.24.0)
+Requirement already satisfied: widgetsnbextension~=4.0.11 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipywidgets&gt;=7.0.0-&gt;ipyvolume) (4.0.11)
+Requirement already satisfied: jupyterlab-widgets~=3.0.11 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipywidgets&gt;=7.0.0-&gt;ipyvolume) (3.0.11)
+Requirement already satisfied: ipydatawidgets&gt;=1.1.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pythreejs&gt;=2.4.0-&gt;ipyvolume) (4.3.5)
+Requirement already satisfied: pandas&lt;3.0.0,&gt;=1.0.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from bqplot-&gt;ipyvolume) (2.2.2)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (1.2.1)
+Requirement already satisfied: cycler&gt;=0.10 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (4.51.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (1.4.5)
+Requirement already satisfied: packaging&gt;=20.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (24.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (3.1.2)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from matplotlib-&gt;ipyvolume) (2.9.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from requests-&gt;ipyvolume) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from requests-&gt;ipyvolume) (3.7)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from requests-&gt;ipyvolume) (2.2.1)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from requests-&gt;ipyvolume) (2024.2.2)
+Requirement already satisfied: decorator in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (5.1.1)
+Requirement already satisfied: jedi&gt;=0.16 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.19.1)
+Requirement already satisfied: matplotlib-inline in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.1.7)
+Requirement already satisfied: prompt-toolkit&lt;3.1.0,&gt;=3.0.41 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (3.0.42)
+Requirement already satisfied: pygments&gt;=2.4.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (2.18.0)
+Requirement already satisfied: stack-data in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.6.2)
+Requirement already satisfied: pexpect&gt;4.3 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (4.9.0)
+Requirement already satisfied: pytz&gt;=2020.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pandas&lt;3.0.0,&gt;=1.0.0-&gt;bqplot-&gt;ipyvolume) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pandas&lt;3.0.0,&gt;=1.0.0-&gt;bqplot-&gt;ipyvolume) (2024.1)
+Requirement already satisfied: six&gt;=1.5 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;ipyvolume) (1.16.0)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.8.4)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pexpect&gt;4.3-&gt;ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.7.0)
+Requirement already satisfied: wcwidth in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from prompt-toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.2.13)
+Requirement already satisfied: executing&gt;=1.2.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (2.0.1)
+Requirement already satisfied: asttokens&gt;=2.1.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (2.4.1)
+Requirement already satisfied: pure-eval in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets&gt;=7.0.0-&gt;ipyvolume) (0.2.2)
+Collecting altair
+  Using cached altair-5.3.0-py3-none-any.whl.metadata (9.2 kB)
+Requirement already satisfied: jinja2 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from altair) (3.1.4)
+Requirement already satisfied: jsonschema&gt;=3.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from altair) (4.22.0)
+Requirement already satisfied: numpy in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from altair) (1.26.0)
+Requirement already satisfied: packaging in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from altair) (24.0)
+Requirement already satisfied: pandas&gt;=0.25 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from altair) (2.2.2)
+Collecting toolz (from altair)
+  Using cached toolz-0.12.1-py3-none-any.whl.metadata (5.1 kB)
+Requirement already satisfied: attrs&gt;=22.2.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from jsonschema&gt;=3.0-&gt;altair) (23.2.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from jsonschema&gt;=3.0-&gt;altair) (2023.12.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.35.1)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.18.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pandas&gt;=0.25-&gt;altair) (2.9.0)
+Requirement already satisfied: pytz&gt;=2020.1 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pandas&gt;=0.25-&gt;altair) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from pandas&gt;=0.25-&gt;altair) (2024.1)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from jinja2-&gt;altair) (2.1.5)
+Requirement already satisfied: six&gt;=1.5 in /home/ksuresh/miniconda3/envs/env_AID2E/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=0.25-&gt;altair) (1.16.0)
+Using cached altair-5.3.0-py3-none-any.whl (857 kB)
+Using cached toolz-0.12.1-py3-none-any.whl (56 kB)
+Installing collected packages: toolz, altair
+Successfully installed altair-5.3.0 toolz-0.12.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1">#import AI4NP_detector_opt.sol2.detector2 as detector2</span>
+<span class="kn">import</span> <span class="nn">detector2</span>
+<span class="kn">from</span> <span class="nn">pymoo.algorithms.moo.nsga2</span> <span class="kn">import</span> <span class="n">NSGA2</span>
+<span class="kn">from</span> <span class="nn">pymoo.core.problem</span> <span class="kn">import</span> <span class="n">Problem</span>
+<span class="kn">from</span> <span class="nn">pymoo.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+<span class="kn">from</span> <span class="nn">pymoo.visualization.scatter</span> <span class="kn">import</span> <span class="n">Scatter</span>
+<span class="kn">from</span> <span class="nn">pymoo.util.display.column</span> <span class="kn">import</span> <span class="n">Column</span>
+<span class="kn">from</span> <span class="nn">pymoo.util.display.output</span> <span class="kn">import</span> <span class="n">Output</span>
+
+<span class="kn">from</span> <span class="nn">pymoo.util.nds.non_dominated_sorting</span> <span class="kn">import</span> <span class="n">NonDominatedSorting</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre></div>
+</div>
+</div>
+</div>
+<section id="create-detector-geometry-and-simulate-tracks">
+<h2>Create detector geometry and simulate tracks<a class="headerlink" href="#create-detector-geometry-and-simulate-tracks" title="Link to this heading">#</a></h2>
+<p>The module detector creates a simple 2D geometry of a wire based tracker made by 4 planes.</p>
+<p>The adjustable parameters are the radius of each wire, the pitch (along the y axis), and the shift along y and z of a plane with respect to the previous one.</p>
+<p>A total of 8 parameters can be tuned.</p>
+<p>The goal of this toy model, is to tune the detector design so to optimize the efficiency (fraction of tracks which are detected) as well as the cost for its realization. As a proxy for the cost, we use the material/volume (the surface in 2D) of the detector. For a track to be detetected, in the efficiency definition we require at least two wires hit by the track.</p>
+<p>So we want to maximize the efficiency (defined in <a class="reference external" href="http://detector.py">detector.py</a>) and minimize the cost.</p>
+<section id="list-of-parameters">
+<h3>LIST OF PARAMETERS<a class="headerlink" href="#list-of-parameters" title="Link to this heading">#</a></h3>
+<p>(baseline values)</p>
+<ul class="simple">
+<li><p>R = .5   [cm]</p></li>
+<li><p>pitch = 4.0  [cm]</p></li>
+<li><p>y1 = 0.0, y2 = 0.0, y3 = 0.0, z1 = 2.0, z2 = 4.0, z3 = 6.0 [cm]</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CONSTANT PARAMETERS</span>
+<span class="c1">#------ define mother region ------#</span>
+<span class="n">y_min</span><span class="o">=-</span><span class="mf">10.1</span>
+<span class="n">y_max</span><span class="o">=</span><span class="mf">10.1</span>
+<span class="n">N_tracks</span> <span class="o">=</span> <span class="mi">1000</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;::::: BASELINE PARAMETERS :::::&quot;</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">pitch</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">y3</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">z1</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="mf">4.0</span>
+<span class="n">z3</span> <span class="o">=</span> <span class="mf">6.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R, pitch, y1, y2, y3, z1, z2, z3: &quot;</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1">#------------- GEOMETRY ---------------#</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;:::: INITIAL GEOMETRY ::::&quot;</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">Tracker</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span><span class="p">)</span>
+<span class="n">Z</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">create_geometry</span><span class="p">()</span>
+<span class="n">num_wires</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">calculate_wires</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+
+<span class="n">volume</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">wires_volume</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
+
+<span class="n">detector2</span><span class="o">.</span><span class="n">geometry_display</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="n">y_max</span><span class="p">,</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">pause</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# of wires: &quot;</span><span class="p">,</span> <span class="n">num_wires</span><span class="p">,</span> <span class="s2">&quot;, volume: &quot;</span><span class="p">,</span> <span class="n">volume</span><span class="p">)</span>
+
+<span class="c1">#------------- TRACK GENERATION -----------#</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;:::: TRACK GENERATION ::::&quot;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">Tracks</span><span class="p">(</span><span class="n">b_min</span><span class="o">=</span><span class="n">y_min</span><span class="p">,</span> <span class="n">b_max</span><span class="o">=</span><span class="n">y_max</span><span class="p">,</span> <span class="n">alpha_mean</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha_std</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">tracks</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">N_tracks</span><span class="p">)</span>
+
+<span class="n">detector2</span><span class="o">.</span><span class="n">geometry_display</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">y_min</span><span class="o">=</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="n">y_max</span><span class="p">,</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pause</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">detector2</span><span class="o">.</span><span class="n">tracks_display</span><span class="p">(</span><span class="n">tracks</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">pause</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+ <span class="c1">#a track is detected if at least two wires have been hit</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">tracks</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+<span class="n">frac_detected</span> <span class="o">=</span> <span class="n">score</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">resolution</span> <span class="o">=</span> <span class="n">score</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fraction of tracks detected: &quot;</span><span class="p">,</span><span class="n">frac_detected</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;resolution: &quot;</span><span class="p">,</span><span class="n">resolution</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>::::: BASELINE PARAMETERS :::::
+R, pitch, y1, y2, y3, z1, z2, z3:  0.5 4.0 2.0 1.0 0.0 2.0 4.0 6.0 
+
+:::: INITIAL GEOMETRY ::::
+# of wires:  21 , volume:  65.94
+:::: TRACK GENERATION ::::
+</pre></div>
+</div>
+<img alt="../_images/8c341241735b12a95ab258fa56b0581691f8ced88b954fa55321ac5208318769.png" src="../_images/8c341241735b12a95ab258fa56b0581691f8ced88b954fa55321ac5208318769.png" />
+<img alt="../_images/6f6bf5645b2c955c087e9e60591cf5159455c83e6eafcb106d27dded294e4e39.png" src="../_images/6f6bf5645b2c955c087e9e60591cf5159455c83e6eafcb106d27dded294e4e39.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fraction of tracks detected:  0.243
+resolution:  0.23594329069824552
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="define-objectives">
+<h2>Define Objectives<a class="headerlink" href="#define-objectives" title="Link to this heading">#</a></h2>
+<p>Defines a class for the objectives of the problem that can be used in the MOO.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">objectives</span><span class="p">():</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">tracks</span><span class="p">,</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">tracks</span> <span class="o">=</span> <span class="n">tracks</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y_min</span> <span class="o">=</span> <span class="n">y_min</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y_max</span> <span class="o">=</span> <span class="n">y_max</span>
+
+  <span class="k">def</span> <span class="nf">wrapper_geometry</span><span class="p">(</span><span class="n">fun</span><span class="p">):</span>
+
+      <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span><span class="p">)</span>
+          <span class="k">return</span> <span class="n">fun</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">inner</span>
+
+  <span class="k">def</span> <span class="nf">update_tracks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_tracks</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">tracks</span> <span class="o">=</span> <span class="n">new_tracks</span>
+
+  <span class="k">def</span> <span class="nf">update_design_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">X</span>
+
+
+  <span class="k">def</span> <span class="nf">geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span><span class="p">):</span>
+    <span class="n">tr</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">Tracker</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">R</span> <span class="o">=</span> <span class="n">R</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">create_geometry</span><span class="p">()</span>
+
+
+  <span class="nd">@wrapper_geometry</span>
+  <span class="k">def</span> <span class="nf">calc_score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="n">res</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tracks</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+      <span class="k">assert</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span><span class="s2">&quot;Fraction or Resolution negative.&quot;</span>
+
+      <span class="k">return</span> <span class="n">res</span>
+
+
+  <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+    <span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span> <span class="o">=</span> <span class="n">X</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tracks</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+
+  <span class="k">def</span> <span class="nf">get_volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="n">detector2</span><span class="o">.</span><span class="n">wires_volume</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_max</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">volume</span>
+
+
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">objectives</span><span class="p">(</span><span class="n">tracks</span><span class="p">,</span><span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span><span class="p">)</span>
+
+<span class="c1">#res.geometry(R, pitch, y1, y2, y3, z1, z2, z3)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">R</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">z1</span><span class="p">,</span> <span class="n">z2</span><span class="p">,</span> <span class="n">z3</span>
+<span class="c1">#fscore  = res.get_score(X)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">update_design_point</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">fscore</span>  <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">calc_score</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">fvolume</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">get_volume</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;...check: &quot;</span><span class="p">,</span> <span class="n">fvolume</span><span class="p">,</span> <span class="n">fscore</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>...check:  65.94 0.243
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="multi-objective-optimization">
+<h2>Multi-Objective Optimization<a class="headerlink" href="#multi-objective-optimization" title="Link to this heading">#</a></h2>
+<p>We will be using pymoo (<a class="reference external" href="https://pymoo.org/getting_started.html">https://pymoo.org/getting_started.html</a>).</p>
+<ul class="simple">
+<li><p>In the constructor method we specify number of variables N, objectives M, and constraint functions, as well as the lower and upper boundaries of each variable. In our toy model, these boundaries are taken in such a way that all solutions are feasible and no constraint function is needed. You can try to change this and introduce some constraint.</p></li>
+<li><p>The <em>_evaluate</em> method takes a one-dimensional NumPy array x number of entries equal to n_var. This behavior is enabled by setting <em>elementwise_evaluation=True</em> while calling the super() method.</p></li>
+<li><p>Notice that every function is minimized. Our efficiency is defined as an tracking inefficiency = 1 - efficiency</p></li>
+<li><p>We add the resolution as a third objective.  The average residual of the track hit from the wire centre is used as a proxy for the resolution for this toy-model</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pymoo.core.problem</span> <span class="kn">import</span> <span class="n">ElementwiseProblem</span>
+<span class="k">class</span> <span class="nc">MyProblem</span><span class="p">(</span><span class="n">ElementwiseProblem</span><span class="p">):</span>
+
+    <span class="c1">#--------- vectorized ---------#</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">n_var</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                         <span class="n">n_obj</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>   <span class="c1">#&lt;------------</span>
+                         <span class="n">n_constr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                         <span class="n">xl</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="mf">2.</span><span class="p">]),</span>
+                         <span class="n">xu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">4.</span><span class="p">,</span><span class="mf">4.</span><span class="p">,</span><span class="mf">4.</span><span class="p">,</span><span class="mf">10.</span><span class="p">,</span><span class="mf">10.</span><span class="p">,</span><span class="mf">10.</span><span class="p">]))</span>
+
+    <span class="k">def</span> <span class="nf">_evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+
+        <span class="n">f1</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">-</span><span class="n">res</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># efficiency</span>
+        <span class="n">f2</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">get_volume</span><span class="p">()</span> <span class="c1"># volume</span>
+        <span class="c1">#f3 = res.get_score(x)[1] #resolution</span>
+
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">]</span><span class="c1">#, f3]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creation-of-problem-and-choice-of-optimization-algorithm">
+<h2>Creation of Problem and choice of optimization algorithm.<a class="headerlink" href="#creation-of-problem-and-choice-of-optimization-algorithm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We will use NSGA-II, as explained in the lectures. You can decide the population size and the number of offsprings, based on what we discussed.</p></li>
+<li><p>Pymoo offers different algorithms that can be used which are highly customizable and can be easily extended.
+<a class="reference external" href="https://pymoo.org/algorithms/index.html">https://pymoo.org/algorithms/index.html</a></p></li>
+<li><p>Before dealing with a problem, it’s useful to compare with a list of test problems reported in <a class="reference external" href="https://pymoo.org/problems/index.html">https://pymoo.org/problems/index.html</a>, where different scenarios in terms of Variables, Objectives, Constraints are described.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">problem</span> <span class="o">=</span> <span class="n">MyProblem</span><span class="p">()</span>
+
+
+<span class="n">algorithm</span> <span class="o">=</span> <span class="n">NSGA2</span><span class="p">(</span><span class="n">pop_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">n_offsprings</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="c1">#n_offsprings=10</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span>
+               <span class="n">algorithm</span><span class="p">,</span>
+               <span class="p">(</span><span class="s2">&quot;n_gen&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+               <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+               <span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+               <span class="n">save_history</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==========================================================
+n_gen  |  n_eval  | n_nds  |      eps      |   indicator  
+==========================================================
+     1 |      100 |     16 |             - |             -
+     2 |      120 |     16 |  0.0091943315 |             f
+     3 |      140 |     18 |  0.0096463023 |         nadir
+     4 |      160 |     20 |  0.0852941176 |         ideal
+     5 |      180 |     22 |  0.0030228092 |             f
+     6 |      200 |     25 |  0.0072161126 |             f
+     7 |      220 |     29 |  0.0059171598 |         nadir
+     8 |      240 |     31 |  0.0075660660 |             f
+     9 |      260 |     38 |  0.0827679783 |         nadir
+    10 |      280 |     37 |  0.0014740566 |             f
+    11 |      300 |     35 |  0.0048721196 |             f
+    12 |      320 |     35 |  0.0037407966 |             f
+    13 |      340 |     36 |  0.0008817831 |             f
+    14 |      360 |     37 |  0.0055620839 |             f
+    15 |      380 |     34 |  0.0040540541 |         ideal
+    16 |      400 |     34 |  0.0028855124 |             f
+    17 |      420 |     34 |  0.0026333306 |             f
+    18 |      440 |     37 |  0.0028253503 |             f
+    19 |      460 |     35 |  0.0017897401 |             f
+    20 |      480 |     34 |  0.0024091023 |             f
+    21 |      500 |     33 |  0.0049416189 |             f
+    22 |      520 |     33 |  0.0050327757 |             f
+    23 |      540 |     35 |  0.0023295549 |             f
+    24 |      560 |     35 |  0.0053763441 |         ideal
+    25 |      580 |     37 |  0.0751445087 |         nadir
+    26 |      600 |     37 |  0.0042142114 |         ideal
+    27 |      620 |     39 |  0.0016179258 |             f
+    28 |      640 |     37 |  0.0023645770 |             f
+    29 |      660 |     33 |  0.0038683143 |             f
+    30 |      680 |     35 |  0.0006176617 |             f
+    31 |      700 |     34 |  0.0008468165 |             f
+    32 |      720 |     36 |  0.0026771572 |             f
+    33 |      740 |     40 |  0.0017839831 |             f
+    34 |      760 |     42 |  0.0025160583 |             f
+    35 |      780 |     38 |  0.0204978038 |         nadir
+    36 |      800 |     36 |  0.0058224163 |         ideal
+    37 |      820 |     37 |  0.0016432622 |             f
+    38 |      840 |     41 |  0.0049386743 |             f
+    39 |      860 |     40 |  0.0000727802 |             f
+    40 |      880 |     39 |  0.0021962121 |             f
+    41 |      900 |     42 |  0.0030205773 |             f
+    42 |      920 |     43 |  0.0016717997 |             f
+    43 |      940 |     44 |  0.0031043880 |             f
+    44 |      960 |     44 |  0.0018034089 |             f
+    45 |      980 |     45 |  0.0028646012 |             f
+    46 |     1000 |     46 |  0.0006842657 |             f
+    47 |     1020 |     47 |  0.0011032916 |             f
+    48 |     1040 |     50 |  0.0033810708 |             f
+    49 |     1060 |     50 |  0.0000582242 |             f
+    50 |     1080 |     53 |  0.0011885416 |             f
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="analysis-of-results">
+<h2>Analysis of Results<a class="headerlink" href="#analysis-of-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="s1">&#39;Efficiency&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="s1">&#39;Volume&#39;</span><span class="p">},</span>
+                    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Efficiency vs Volume&quot;</span><span class="p">,</span>
+                    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                              <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;DarkSlateGrey&#39;</span><span class="p">)),</span>
+                    <span class="n">selector</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="b638d0dd-002f-4986-9eca-499076fba519" class="plotly-graph-div" style="height:800px; width:800px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("b638d0dd-002f-4986-9eca-499076fba519")) {                    Plotly.newPlot(                        "b638d0dd-002f-4986-9eca-499076fba519",                        [{"hovertemplate":"Efficiency=%{x}\u003cbr\u003eVolume=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle","line":{"color":"DarkSlateGrey","width":1},"size":8},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":[0.738,0.09899999999999998,0.07599999999999996,0.32299999999999995,0.29500000000000004,0.527,0.399,0.45799999999999996,0.393,0.363,0.19299999999999995,0.7170000000000001,0.752,0.18200000000000005,0.07099999999999995,0.401,0.06499999999999995,0.45499999999999996,0.631,0.35,0.16300000000000003,0.471,0.13,0.7170000000000001,0.361,0.41300000000000003,0.258,0.20699999999999996,0.36,0.721,0.14200000000000002,0.6739999999999999,0.471,0.505,0.5800000000000001,0.364,0.5469999999999999,0.21999999999999997,0.602,0.44599999999999995,0.41500000000000004,0.11199999999999999,0.20499999999999996,0.6699999999999999,0.07899999999999996,0.6579999999999999,0.645,0.33399999999999996,0.14900000000000002,0.20799999999999996,0.5780000000000001,0.648,0.16100000000000003],"xaxis":"x","y":[55.70272008545624,231.11417811832902,243.59099190966558,140.241208192748,148.12829556348362,82.07685985687286,106.98779307797913,94.9972663569704,107.89433781742379,111.60614380851916,179.31866195639438,59.95932088813703,53.81840055087914,187.2852540676264,243.6146735146521,103.98024116969101,280.1805403312882,97.63489926461746,71.43080358183994,117.03823176400981,191.52809714977312,92.38623242887088,226.4731243654525,59.95932088813703,116.75686742899482,103.26327486290266,149.36845680169247,166.3174349639388,116.90325600471796,57.53226869612317,223.55556201813556,60.72850584590779,92.38623242887088,84.89641032723343,78.22051482192059,111.18879286341661,81.86478379628235,160.86471060639113,73.27389381726708,97.64047365381687,99.38721593203984,230.05067674530304,173.76799759668899,63.924742995692405,235.75613565934077,69.24838034860285,69.46348274803321,123.42756307927324,222.6296871728739,163.70342221905037,81.77599276837152,69.40800192787145,207.78770802801566],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Efficiency"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Volume"}},"legend":{"tracegroupgap":0},"title":{"text":"Efficiency vs Volume"},"height":800,"width":800},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('b638d0dd-002f-4986-9eca-499076fba519');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">z</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+                     <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="s2">&quot;InEfficiency&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="s2">&quot;Volume&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;Resolution&quot;</span>
+                 <span class="p">},</span><span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Final Call feasible solutions&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                              <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;DarkSlateGrey&#39;</span><span class="p">)),</span>
+                  <span class="n">selector</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">z</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                      <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="s2">&quot;InEfficiency&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                      <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="s2">&quot;Volume&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>                      <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="s2">&quot;Resolution&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>                  <span class="p">},</span><span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Final Call feasible solutions&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>                               <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>                                         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;DarkSlateGrey&#39;</span><span class="p">)),</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>                   <span class="n">selector</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="ne">IndexError</span>: index 2 is out of bounds for axis 1 with size 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Making a animation of evolution</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">obj1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">obj2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">obj3</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">calls</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">history</span><span class="p">:</span>
+
+    <span class="n">objs</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">pop</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>
+    <span class="n">obj1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">objs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">obj2</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">objs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">obj3</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">objs</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">calls</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">n_gen</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">objs</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;InEfficiency&quot;</span><span class="p">:</span> <span class="n">obj1</span><span class="p">,</span> <span class="s2">&quot;Volume&quot;</span><span class="p">:</span> <span class="n">obj2</span><span class="p">,</span>
+                          <span class="s2">&quot;Resolution&quot;</span><span class="p">:</span> <span class="n">obj3</span><span class="p">,</span> <span class="s2">&quot;n_gen&quot;</span><span class="p">:</span> <span class="n">calls</span><span class="p">})</span>
+
+<span class="n">obj_fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;InEfficiency&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Volume&quot;</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;Resolution&quot;</span><span class="p">,</span>
+                        <span class="n">animation_frame</span><span class="o">=</span><span class="s2">&quot;n_gen&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;n_gen&quot;</span><span class="p">,</span>
+                        <span class="n">range_x</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">],</span> <span class="n">range_y</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span> <span class="p">,</span> <span class="mf">400.</span><span class="p">],</span> <span class="n">range_z</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">],</span>
+                        <span class="n">hover_data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+                        <span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">800</span><span class="p">)</span>
+<span class="n">obj_fig</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">layout_coloraxis_showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">obj_fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">updatemenus</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">buttons</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;frame&quot;</span><span class="p">][</span><span class="s2">&quot;duration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">obj_fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">transition</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;duration&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">})</span>
+<span class="n">obj_fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">obj1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">objs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">obj2</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">objs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">13</span>     <span class="n">obj3</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">objs</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">calls</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">n_gen</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">objs</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;InEfficiency&quot;</span><span class="p">:</span> <span class="n">obj1</span><span class="p">,</span> <span class="s2">&quot;Volume&quot;</span><span class="p">:</span> <span class="n">obj2</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>                           <span class="s2">&quot;Resolution&quot;</span><span class="p">:</span> <span class="n">obj3</span><span class="p">,</span> <span class="s2">&quot;n_gen&quot;</span><span class="p">:</span> <span class="n">calls</span><span class="p">})</span>
+
+<span class="ne">IndexError</span>: index 2 is out of bounds for axis 1 with size 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">warnings</span><span class="p">;</span> <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">55</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Ineff&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Vol&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Res&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">res</span><span class="o">.</span><span class="n">F</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">55</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Ineff&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Vol&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="ne">IndexError</span>: index 2 is out of bounds for axis 1 with size 2
+</pre></div>
+</div>
+<img alt="../_images/0ae363117de535eca511f6f42a93b4119a5767508212bd6ac459986516b5961c.png" src="../_images/0ae363117de535eca511f6f42a93b4119a5767508212bd6ac459986516b5961c.png" />
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exercise-3">
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Determine the Pareto set from the 3D front and choose an optimal point</p></li>
+<li><p>Plot the optimal configuration of the tracker corresponding to that point</p></li>
+<li><p>Do analysis of convergence</p></li>
+<li><p>Visualize the point with a radar or petal diagram, following <a class="reference external" href="https://pymoo.org/visualization/index.html">https://pymoo.org/visualization/index.html</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "cfteach/HUGS_2025",
+            ref: "webpage-src",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Day-3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-detector-geometry-and-simulate-tracks">Create detector geometry and simulate tracks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-parameters">LIST OF PARAMETERS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-objectives">Define Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-objective-optimization">Multi-Objective Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-problem-and-choice-of-optimization-algorithm">Creation of Problem and choice of optimization algorithm.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-results">Analysis of Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cristiano Fanelli
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  HUGS2025
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
