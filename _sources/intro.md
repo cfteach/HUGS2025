@@ -31,8 +31,6 @@ This course is based on the following references {cite:p}`mehta2019high,EICYello
 
 #### 📚 2025 Lectures
 
-- [2023 HUGS Lectures on AI/ML for Nuclear Physics](https://cfteach.github.io/HUGS23)
-
 > ⚠️ **Note:** Course material will appear below.
 
 
