@@ -1,4 +1,4 @@
-# Summary
+# EIC Summary Overview and Chatbot 
 
 + EIC will be the first large-scale experiment to be designed with the support of AI.
 
@@ -9,3 +9,5 @@
   + Pareto solutions can be explored post hoc and decision making can be done based on cost, engineering realisation etc.
 
 + The EIC tracker optimisation is a continuous and an iterative process. AI had assisted in making technological choices for the tracker design and will be extended to the ePIC integrated detector.
+
++ More information on EIC can be retrieved using our [RAG-based agent chatbot](https://rags4eic-ai4eic.streamlit.app/RAG-ChatBot)

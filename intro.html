@@ -94,6 +94,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://cfteach.github.io/HUGS2025/intro.html" />
@@ -226,6 +228,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1eFXv0KlBtPr8G8Aw_aDlZOIOHUPEuvzn/view?usp=share_link">(Lec 1, part A) A Brief Introduction to AI/ML</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1A39DZNMuUvabV8XyhJ2VSt4CYkNUEMxs/view?usp=share_link">(Lec 1, part B) AI/ML in Nuclear Physics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://docs.google.com/presentation/d/1GlcFOsytJsw6B0k8AXwuswUiuU8LYySbRgrC3bkRmhY/edit?usp=sharing">(Lec 2) CNN for Physics  by K. Suresh</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Old) Lectures</span></p>
 <ul class="nav bd-sidenav">
@@ -236,7 +239,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="NN_h1_reg_CF_2025.html">(Tut 1) Deeply Learning Deep Inelastic Scattering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NN_h1_reg_CF_2025.html">(Lec 1) Deeply Learning Deep Inelastic Scattering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CNN_HUGS2025_01.html">(Lec 2) CNN - Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CNN_HUGS2025_02.html">(Lec 2) CNN - Part 2</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/drive/folders/1EyMKnJMEmBGZ-BRNbebIfpfI7j1OywqD?usp=share_link">(Lec 2) Dataset</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Old) Tutorials</span></p>
 <ul class="nav bd-sidenav">
@@ -280,8 +286,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Datasets / Modules</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1Z-lUTZrHoqeKsYHf34gR3kF45bVM6XG7/view">all-h1-rapgap.root</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/cfteach/HUGS23/main/other/intro_Data.py">intro_Data.py</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1Z-lUTZrHoqeKsYHf34gR3kF45bVM6XG7/view">(Lec 1) all-h1-rapgap.root</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/cfteach/HUGS23/main/other/intro_Data.py">(Lec 1) intro_Data.py</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/drive/folders/1EyMKnJMEmBGZ-BRNbebIfpfI7j1OywqD?usp=share_link">(Lec 2) Dataset</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional resources</span></p>
 <ul class="nav bd-sidenav">
@@ -537,6 +544,7 @@ document.write(`
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1eFXv0KlBtPr8G8Aw_aDlZOIOHUPEuvzn/view?usp=share_link">(Lec 1, part A) A Brief Introduction to AI/ML</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1A39DZNMuUvabV8XyhJ2VSt4CYkNUEMxs/view?usp=share_link">(Lec 1, part B) AI/ML in Nuclear Physics</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://docs.google.com/presentation/d/1GlcFOsytJsw6B0k8AXwuswUiuU8LYySbRgrC3bkRmhY/edit?usp=sharing">(Lec 2) CNN for Physics  by K. Suresh</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -551,7 +559,10 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="NN_h1_reg_CF_2025.html">(Tut 1) Deeply Learning Deep Inelastic Scattering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NN_h1_reg_CF_2025.html">(Lec 1) Deeply Learning Deep Inelastic Scattering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CNN_HUGS2025_01.html">(Lec 2) CNN - Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CNN_HUGS2025_02.html">(Lec 2) CNN - Part 2</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/drive/folders/1EyMKnJMEmBGZ-BRNbebIfpfI7j1OywqD?usp=share_link">(Lec 2) Dataset</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -603,8 +614,9 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Datasets / Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1Z-lUTZrHoqeKsYHf34gR3kF45bVM6XG7/view">all-h1-rapgap.root</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/cfteach/HUGS23/main/other/intro_Data.py">intro_Data.py</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/file/d/1Z-lUTZrHoqeKsYHf34gR3kF45bVM6XG7/view">(Lec 1) all-h1-rapgap.root</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://raw.githubusercontent.com/cfteach/HUGS23/main/other/intro_Data.py">(Lec 1) intro_Data.py</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://drive.google.com/drive/folders/1EyMKnJMEmBGZ-BRNbebIfpfI7j1OywqD?usp=share_link">(Lec 2) Dataset</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">

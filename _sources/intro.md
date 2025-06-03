@@ -1,4 +1,4 @@
-# AI/ML for Fusion Summer School 2025
+# AI/ML for Nuclear Physics HUGS 2025
 
 <center>
 
